@@ -1,0 +1,56 @@
+body {
+	background: #141414;
+	color: #ffffff;
+}
+
+.movie-app > .row {
+	overflow-x:auto;
+	flex-wrap:nowrap;
+	
+}
+
+.image-container {
+	position: relative;
+	transition: transform 0.2s;
+	white-space: nowrap;
+	max-width: 200px;
+}
+img{
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.image-container:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+	opacity: 1;
+}
+
+.overlay {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.8);
+	width: 50%;
+	transition: 0.5s ease;
+	opacity: 0;
+	bottom: 0;
+	font-size: 12px;
+	padding: 20px;
+	text-align: center;
+}
+.row::-webkit-scrollbar {
+	width: 10px;
+  }
+  
+  .row::-webkit-scrollbar-track {
+	background: linear-gradient(90deg, #eee, #ccc);
+  }
+  
+  .row::-webkit-scrollbar-thumb {
+	background: linear-gradient(90deg, #1d79bb, #6b260d);
+	border-radius: 5px;
+  }
+  
